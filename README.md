@@ -10,11 +10,6 @@ MovieApp is a simple iOS application that demonstrate the usage of Swift and Com
 - Follows MVVM architecture
 - Unit and UI tests with XCTest and XCUITest
 
-## 📱 Screenshots
-
-![LandingScreen](https://github.com/user-attachments/assets/1a3f5a43-a301-49a2-b340-505049c8b822)
-![MoviesListScreen](https://github.com/user-attachments/assets/fbc3c39d-2d61-4ea0-9acd-54570ff46182)
-
 ## 🛠 Technologies Used
 
 - **Swift** – Core programming language

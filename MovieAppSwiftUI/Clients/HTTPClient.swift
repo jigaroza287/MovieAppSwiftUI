@@ -14,9 +14,15 @@ enum NetwrorkError: Error {
 }
 
 class HTTPClient {
+    private var environment: APIEnvironment
+    
+    init(environment: APIEnvironment) {
+        self.environment = environment
+    }
+    
     func fetchMovies(searchText: String) -> AnyPublisher<[Movie], Error> {
         guard let validSearch = searchText.urlEncoded,
-        let url = URL(string: "http://www.omdbapi.com/?s=\(validSearch)&apikey=c15c399c") else {
+              let url = URL(string: "\(environment.baseURL)?s=\(validSearch)&apikey=c15c399c") else {
             return Fail(error: NetwrorkError.invalidURL).eraseToAnyPublisher()
         }
         

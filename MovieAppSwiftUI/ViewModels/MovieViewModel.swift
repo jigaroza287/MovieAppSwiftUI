@@ -12,13 +12,13 @@ class MovieViewModel: ObservableObject {
     @Published var movies: [Movie] = []
     @Published var isLoading: Bool = false
     @Published var error: Error?
-    
+
     var searchSubject = CurrentValueSubject<String, Never>("")
     private var cancellables: Set<AnyCancellable> = []
-    
+
     var httpClient: HTTPClient
     
-    init (httpClient: HTTPClient = .init()) {
+    init (httpClient: HTTPClient) {
         self.httpClient = httpClient
         setUpSearchSubscription()
     }

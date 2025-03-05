@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var viewModel: MovieViewModel = .init()
+    @StateObject var viewModel = MovieViewModel(httpClient: HTTPClient(environment: .development))
     @State var searchText: String = ""
     
     var body: some View {

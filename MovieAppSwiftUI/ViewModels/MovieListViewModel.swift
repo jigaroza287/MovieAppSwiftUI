@@ -1,5 +1,5 @@
 //
-//  MoviesViewModel.swift
+//  MovieListViewModel.swift
 //  MovieAppSwiftUI
 //
 //  Created by Jigar Oza on 04/03/25.
@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class MovieViewModel: ObservableObject {
+class MovieListViewModel: ObservableObject {
     @Published var movies: [Movie] = []
     @Published var isLoading: Bool = false
     @Published var error: Error?

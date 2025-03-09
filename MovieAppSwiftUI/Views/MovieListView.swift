@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MovieListView.swift
 //  MovieAppSwiftUI
 //
 //  Created by Jigar Oza on 25/02/25.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @StateObject var viewModel = MovieViewModel(httpClient: HTTPClient(environment: .development))
+struct MovieListView: View {
+    @StateObject var viewModel = MovieListViewModel(httpClient: HTTPClient(environment: .development))
     @State var searchText: String = ""
     
     var body: some View {
@@ -37,5 +37,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    MovieListView()
 }

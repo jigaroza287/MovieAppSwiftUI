@@ -18,7 +18,7 @@ class MovieListViewModel: ObservableObject {
 
     var httpClient: HTTPClient
     
-    init (httpClient: HTTPClient) {
+    init (httpClient: HTTPClient = .init(environment: .development)) {
         self.httpClient = httpClient
         setUpSearchSubscription()
     }

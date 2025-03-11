@@ -9,6 +9,7 @@ import Foundation
 
 struct APIEnvironment {
     let baseURL: String
+    let apiKey: String
     
-    static let development = APIEnvironment(baseURL: "http://www.omdbapi.com/")
+    static let development = APIEnvironment(baseURL: "http://www.omdbapi.com/", apiKey: "c15c399c")
 }

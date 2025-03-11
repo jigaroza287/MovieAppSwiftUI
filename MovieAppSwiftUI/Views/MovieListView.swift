@@ -14,17 +14,19 @@ struct MovieListView: View {
     var body: some View {
         NavigationStack {
             List(viewModel.movies) { movie in
-                HStack {
-                    AsyncImage(url: movie.poster) { image in
-                        image
-                            .resizable()
-                            .scaledToFit()
-                    } placeholder: {
-                        ProgressView()
+                NavigationLink(destination: MovieDetailView(imdbId: movie.id)) {
+                    HStack {
+                        AsyncImage(url: URL(string: movie.poster ?? "")) { image in
+                            image
+                                .resizable()
+                                .scaledToFit()
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        .frame(width: 50, height: 100)
+                        Text(movie.title)
+                            .font(.title3)
                     }
-                    .frame(width: 50, height: 100)
-                    Text(movie.title)
-                        .font(.title3)
                 }
             }
             .searchable(text: $searchText)

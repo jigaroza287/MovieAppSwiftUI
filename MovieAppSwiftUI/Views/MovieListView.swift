@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MovieListView: View {
     @StateObject var viewModel = MovieListViewModel()
-    @State var searchText: String = ""
+    @State var searchText: String = "Hobbit"
     
     var body: some View {
         NavigationStack {

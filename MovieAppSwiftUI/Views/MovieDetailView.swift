@@ -70,7 +70,7 @@ private struct MovieHeaderView: View {
     }
 }
 
-// MARK: - Movie Details View
+// MARK: - Movie Common Details View
 private struct MovieCommonDetailsView: View {
     let movie: Movie
 

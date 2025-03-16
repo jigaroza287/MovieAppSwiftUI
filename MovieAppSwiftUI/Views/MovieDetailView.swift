@@ -41,7 +41,7 @@ private struct MovieContentView: View {
     let movie: Movie
 
     var body: some View {
-        ScrollView {
+        VStack {
             MovieHeaderView(posterURL: movie.poster)
             MovieCommonDetailsView(movie: movie)
             MovieTabView(movie: movie)

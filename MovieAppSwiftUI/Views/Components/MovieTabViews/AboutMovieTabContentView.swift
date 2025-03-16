@@ -12,9 +12,6 @@ struct AboutMovieTabContentView: View {
     
     private var movieDetails: [(String, String)] {
         [
-            ("Released", movie?.released),
-            ("Director", movie?.director),
-            ("Writer", movie?.writer),
             ("Actors", movie?.actors),
             ("Language", movie?.language)
         ]
@@ -25,7 +22,8 @@ struct AboutMovieTabContentView: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        VStack(alignment: .leading) {
+            Text(movie?.plot ?? "")
             ForEach(movieDetails, id: \.0) { key, value in
                 HStack {
                     Text(key)
@@ -35,8 +33,12 @@ struct AboutMovieTabContentView: View {
                         .lineLimit(2)
                 }
             }
+            NavigationLink(destination: EmptyView()) {
+                Text("See all movie info >")
+            }
         }
-        .padding()
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+        .padding(.horizontal)
     }
 }
 

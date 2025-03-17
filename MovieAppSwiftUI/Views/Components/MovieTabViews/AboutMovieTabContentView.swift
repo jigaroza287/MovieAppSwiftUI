@@ -35,6 +35,7 @@ struct AboutMovieTabContentView: View {
             }
             NavigationLink(destination: EmptyView()) {
                 Text("See all movie info >")
+                    .padding(.top)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)

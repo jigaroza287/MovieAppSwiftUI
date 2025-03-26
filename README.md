@@ -69,17 +69,6 @@ The app follows the **MVVM** (Model-View-ViewModel) architecture for better sepa
 - **Handling empty results**
 - **Validating movie list display**
 
-## 🤝 Contributing
-
-1. Fork the project.
-2. Create a new branch (`feature-branch`).
-3. Commit your changes.
-4. Push to your branch and submit a pull request.
-
-## 📄 License
-
-This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
-
 ## 📬 Contact
 
 For any issues, please create an **Issue** on GitHub or contact the repository owner.
